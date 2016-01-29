@@ -7,7 +7,7 @@ User=www-data
 Group=www-data
 WorkingDirectory=/srv/html/calpolycss-website
 Environment="PATH=/srv/html/calpolycss-website/env/bin"
-ExecStart=/srv/html/calpolycss-website/env/bin/gunicorn --workers 3 --bind unix:calpolycss.com.sock -m 007 calpolycss:app
+ExecStart=/srv/html/calpolycss-website/env/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 -m 007 calpolycss:app
 
 [Install]
 WantedBy=multi-user.target
