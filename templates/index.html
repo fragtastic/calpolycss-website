@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
+{% block extra_css %}
+    <link href="static/css/carousel.css" rel="stylesheet">
+{% endblock %}
 {% block content %}
-    {% include 'jumbotron.html' %}
+    {% include 'carousel.html' %}
     <div>
         {% include 'about_blurb.html' %}
     </div>
