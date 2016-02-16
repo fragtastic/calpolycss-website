@@ -1,7 +1,11 @@
 # calpolycss-website
 Website for http://calpolycss.com
 
-# commiting
+# Commiting
+## Style
+- Single commit == single purpose. Don't pack a lot into one.
+- Ctrl+Alt+L format in PyCharm. 
+
 ## Bootlint
 Check for errors with https://github.com/twbs/bootlint#in-the-browser
 
