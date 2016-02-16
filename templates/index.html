@@ -1,4 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
-index page
+    {% include 'jumbotron.html' %}
+    <div>
+        {% include 'about_blurb.html' %}
+    </div>
+    <div class="row">
+        <div class="col-lg-3 table-bordered">
+            <a href="https://www.facebook.com/groups/cppGirlsNightOfCode/">Girls' Night Of Code</a>
+            <p>Girls' Night of Code meetings, where we share our stories and experiences as women in computer science,
+                as well as interesting topics. We meet every Tuesday night from 7-8pm in building 8 room 48, and we'd
+                love to see you all there.
+            </p>
+        </div>
+        <div class="col-lg-3 table-bordered">
+            <a href="https://fragnite.calpolyswift.org/">FragNite</a>
+            <p>Join CSS and SWIFT for an intense night of gaming and fun.</p>
+        </div>
+    </div>
+    <div class="row well">
+        <section>
+            <div class="col-lg-6">
+                <h1>Attend a CSS Meeting!</h1>
+                <p>CSS general meetings are Thursdays from 12-1pm in Building 8 ROOM.</p>
+            </div>
+            <div class="col-lg-3 pull-right">
+                <a class="btn btn-link" href="calendar.html"><i class="fa fa-play-circle"></i>Upcoming Meetings</a>
+            </div>
+        </section>
+    </div>
 {% endblock %}
