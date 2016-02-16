@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
+import os
 
 app = Flask(__name__)
 app.debug = False
@@ -6,12 +7,25 @@ app.debug = False
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return page("index.html")
 
 
 @app.route('/<page>.html')
 def page(page):
-    return render_template(page + ".html")
+    if os.path.exists(page + ".html"):
+        return render_template(page + ".html")
+    else:
+        abort(404)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def server_error(e):
+    return render_template('500.html'), 500
 
 
 if __name__ == '__main__':
