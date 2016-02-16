@@ -7,12 +7,12 @@ app.debug = False
 
 @app.route('/')
 def index():
-    return page("index.html")
+    return page("index")
 
 
 @app.route('/<page>.html')
 def page(page):
-    if os.path.exists(page + ".html"):
+    if os.path.exists("templates/" + page + ".html"):
         return render_template(page + ".html")
     else:
         abort(404)
